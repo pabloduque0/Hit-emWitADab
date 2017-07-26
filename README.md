@@ -8,6 +8,6 @@ I plan on keep adding more in the future!
 
 ### Dab
 
-run 'python Dab.py'
+run `python Dab.py`
 
 I'll add double dab and half dab as parameters as soon as I can
