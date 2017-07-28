@@ -11,3 +11,11 @@ I plan on keep adding more in the future!
 run `python Dab.py`
 
 I'll add double dab and half dab as parameters as soon as I can
+
+### Whip and Nae Nae
+
+run `python NaeNae.py`
+
+Sequence whip(right) - nae nae (right) - whip (right) - whip (lfet) - nae nae (right) Coming soon!
+
+If you nae nae with your left hand... this repo might not be for you.
