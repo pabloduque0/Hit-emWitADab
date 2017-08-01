@@ -51,10 +51,13 @@ def whip(motion_proxy):
 
     naeNae(motion_proxy)
 
-def armDown(arm):
 
+try:
+    tts = ALProxy("ALTextToSpeech", "169.254.123.55", 9559)
+except Exception as e:
+    print("Could not create proxy to ALMotion")
+    print('{}{}'.format("Error was: ", e))
 
-tts = ALProxy("ALTextToSpeech", "169.254.123.55", 9559)
 try:
     motion_proxy = ALProxy("ALMotion", "169.254.123.55", 9559)
 except Exception as e:

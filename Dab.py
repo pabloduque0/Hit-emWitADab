@@ -1,8 +1,19 @@
 from naoqi import ALProxy
 import almath
 
-tts = ALProxy("ALTextToSpeech", "your_robot_ip", 9559)
-motionProxy = ALProxy("ALMotion", "your_robot_ip", 9559)
+
+try:
+    tts = ALProxy("ALTextToSpeech", "your_robot_ip", 9559)
+except Exception as e:
+    print("Could not create proxy to ALTextToSpeech")
+    print('{}{}'.format("Error was: ", e))
+
+
+try:
+    motion_proxy = ALProxy("ALMotion", "169.254.123.55", 9559)
+except Exception as e:
+    print("Could not create proxy to ALMotion")
+    print('{}{}'.format("Error was: ", e))
 
 names      = ["LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw",
               "LShoulderPitch", "RElbowRoll", "LHipPitch", "RHipPitch",
@@ -16,7 +27,7 @@ angleLists = [76.0*almath.TO_RAD, 88.5*almath.TO_RAD, -10*almath.TO_RAD, -10*alm
 
 timeLists = 1.3
 isAbsolute = True
-motionProxy.openHand("RHand")
-motionProxy.openHand("LHand")
-motionProxy.angleInterpolation(names, angleLists, timeLists, isAbsolute)
+motion_proxy.openHand("RHand")
+motion_proxy.openHand("LHand")
+motion_proxy.angleInterpolation(names, angleLists, timeLists, isAbsolute)
 tts.say("Daab")
