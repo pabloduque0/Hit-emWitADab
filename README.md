@@ -6,6 +6,14 @@ Nao Robot does the most infamous dances.
 
 I plan on keep adding more in the future!
 
+## Getting started
+
+Clone repo: `git clone https://github.com/bonisthegreat/Hit-emWitADab`
+
+`cd Hit-emWitADab`
+
+Change IP address on all source files to your robot's.
+
 ### Dab
 
 run `python Dab.py`
